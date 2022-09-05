@@ -39,7 +39,7 @@ function changeBetweenReadingsAvg(voltMeasurements, readingAverage) {
     // 2 tests to check readings diffence before or after current readings abs used to keep it a positive int
     let testBelow = Math.abs(voltMeasurements[i - 1] - voltMeasurements[i]);
     let testAbove = Math.abs(voltMeasurements[i + 1] - voltMeasurements[i]);
-    // testing and outputting if diffrence is more than 20 of the avg
+    // testing and outputting if diffrence is more than 20 of the avg.
     testAbove >= avg15Percent || testBelow >= avg15Percent
       ? console.log(true)
       : console.log(false);
