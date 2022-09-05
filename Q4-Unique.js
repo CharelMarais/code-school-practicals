@@ -11,12 +11,12 @@ for (let i = 0; i < numbers.length; i++) {
   count = 0;
   for (let a = 0; a < numbers.length; a++) {
     // inner loop to check current num to the list checking from currrent I downwards
-    if (numbers[a] == numbers[i]) {
+    if (numbers[a] === numbers[i]) {
       //addinging counter to check previous itterations
       count++;
     }
   }
-  if (count == 1) {
+  if (count === 1) {
     //if checking if more than 1 itteration
     uniqueNumbers.push(numbers[i]); // saving unique to new list/array
   }
