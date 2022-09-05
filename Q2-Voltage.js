@@ -17,16 +17,18 @@ function avgVoltMeasure(voltMeasurements) {
 
 function avgVoltAltered(voltMeasurements, readingAverage) {
   let variesMoreThan10 = [];
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < voltMeasurements.length; i++) {
     // formula to check diffrence between avg and current reading
     let diffrenceToAvg =
       ((voltMeasurements[i] - readingAverage) /
         ((voltMeasurements[i] + readingAverage) / 2)) *
       100;
     //saving bool to array depending on % diffrence
-    diffrenceToAvg >= 10 || diffrenceToAvg <= -10
-      ? variesMoreThan10.push(true)
-      : variesMoreThan10.push(false);
+    if (diffrenceToAvg >= 10 || diffrenceToAvg <= -10) {
+      variesMoreThan10.push(true);
+    } else {
+      variesMoreThan10.push(false);
+    }
   }
   return variesMoreThan10;
 }
@@ -35,14 +37,16 @@ function changeBetweenReadingsAvg(voltMeasurements, readingAverage) {
   // checking 15% or avg
   let avg15Percent = (readingAverage * 15) / 100;
   let variesBetweenReadings = [];
-  for (let i = 0; i < 12; i++) {
+  for (let i = 0; i < voltMeasurements.length; i++) {
     // 2 tests to check readings diffence before or after current readings abs used to keep it a positive int
     let testBelow = Math.abs(voltMeasurements[i - 1] - voltMeasurements[i]);
     let testAbove = Math.abs(voltMeasurements[i + 1] - voltMeasurements[i]);
     // testing and outputting if diffrence is more than 20 of the avg.
-    testAbove >= avg15Percent || testBelow >= avg15Percent
-      ? console.log(true)
-      : console.log(false);
+    if (testAbove >= avg15Percent || testBelow >= avg15Percent) {
+      console.log(true);
+    } else {
+      console.log(false);
+    }
   }
   return variesBetweenReadings;
 }
@@ -53,12 +57,9 @@ let voltMeasurements = [
 ];
 let readingAverage = avgVoltMeasure(voltMeasurements);
 
-console.log(
-  'Average: \n',
-  readingAverage,
-  '\n Voltage more or less than 10% of average: \n',
-  avgVoltAltered(voltMeasurements, readingAverage),
-  '\n Voltage more or less than 15% of the average between other readings: \n'
-  //changeBetweenReadingsAvg(voltMeasurements, readingAverage)
-);
+console.log(`Average: \n ${readingAverage}
+  \n Voltage more or less than 10% of average: \n
+  ${avgVoltAltered(voltMeasurements, readingAverage)},
+  \n Voltage more or less than 15% of the average between other readings: \n`);
+//changeBetweenReadingsAvg(voltMeasurements, readingAverage)
 changeBetweenReadingsAvg(voltMeasurements, readingAverage);
