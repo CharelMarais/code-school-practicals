@@ -4,29 +4,41 @@
 
 function descendingSelectionSortDouble(doubleArray) {
   for (let i = 0; i < doubleArray.length; i++) {
-    let lowest = i;
-    // inner loop to check the lowest value after position i
     for (let a = i + 1; a < doubleArray.length; a++) {
-      if (doubleArray[i] < doubleArray[a]) {
-        lowest = a;
+      // If to swap array at i position if position a is lower
+      if (doubleArray[a] > doubleArray[i]) {
+        let temp = doubleArray[i];
+        doubleArray[i] = doubleArray[a];
+        doubleArray[a] = temp;
+        i--; // this will start the next outer loop from the change item to find any smaller items.
       }
-    }
-    // if to swap array at i with the lowest array after i
-    if (lowest !== i) {
-      let temp = doubleArray[i];
-      doubleArray[i] = doubleArray[lowest];
-      doubleArray[lowest] = temp;
     }
   }
   return doubleArray;
 }
-// sort using .sort()
+
 function selectionSortChar(charArray) {
+  for (let i = 0; i < charArray.length; i++) {
+    for (let a = i + 1; a < charArray.length; a++) {
+      // If to swap array at i position if position a is lower
+      if (charArray[a] < charArray[i]) {
+        let temp = charArray[i];
+        charArray[i] = charArray[a];
+        charArray[a] = temp;
+        i--; // this will start the next outer loop from the change item to find any smaller items.
+      }
+    }
+  }
+  return charArray;
+}
+
+// sort using .sort()
+function SortChar(charArray) {
   return charArray.sort();
 }
 
 let doubleArray = [123, 124, 412, 5235, 34234, 123, 1];
-let charArray = ['a', 'e', 't', 'c'];
+let charArray = ['a', 'e', 'c', 'o', 'm', 'p', 'u', 't', 'r', 't', 'c'];
 
 console.log(`The array ${doubleArray} is sorted as ${descendingSelectionSortDouble(
   doubleArray
