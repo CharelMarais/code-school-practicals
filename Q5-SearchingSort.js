@@ -5,12 +5,12 @@
 function descendingSelectionSortDouble(doubleArray) {
   for (let i = 0; i < doubleArray.length; i++) {
     for (let a = i + 1; a < doubleArray.length; a++) {
-      // If to swap array at i position if position a is lower
+      // If to swap array at i position if position a is higher
       if (doubleArray[a] > doubleArray[i]) {
         let temp = doubleArray[i];
         doubleArray[i] = doubleArray[a];
         doubleArray[a] = temp;
-        i--; // this will start the next outer loop from the change item to find any smaller items.
+        i--; // this will start the next outer loop from the change item to find any larger items.
       }
     }
   }
@@ -25,7 +25,7 @@ function selectionSortChar(charArray) {
         let temp = charArray[i];
         charArray[i] = charArray[a];
         charArray[a] = temp;
-        i--; // this will start the next outer loop from the change item to find any smaller items.
+        i--; // this will start the next outer loop from the changed item to find any smaller items.
       }
     }
   }
@@ -33,7 +33,7 @@ function selectionSortChar(charArray) {
 }
 
 // sort using .sort()
-function SortChar(charArray) {
+function sortChar(charArray) {
   return charArray.sort();
 }
 

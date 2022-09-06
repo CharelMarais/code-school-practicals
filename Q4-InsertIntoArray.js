@@ -22,6 +22,8 @@ The output is: ${insertIntoCharArray(charArray, index, element)}`
   }`
 );
 
+// Below is the if version of the above
+
 // if (charArray.length <= index) {
 //   console.log(
 //     `The index(${index}) is looking for a longer array(${charArray.length})
