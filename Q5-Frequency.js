@@ -1,5 +1,5 @@
 //Takes range of ages 0 - 109
-//dispaly total ages withing ranges
+//display total ages withing ranges
 // 0-9 10-19 20-29 ...
 
 let age = [12, 9, 100, 58];
