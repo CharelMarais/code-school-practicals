@@ -21,15 +21,3 @@ Please decrease the index and try again`
 The output is: ${insertIntoCharArray(charArray, index, element)}`
   }`
 );
-
-// Below is the if version of the above
-
-// if (charArray.length <= index) {
-//   console.log(
-//     `The index(${index}) is looking for a longer array(${charArray.length})
-//     Please decrease the index and try again`
-//   );
-// } else {
-//   console.log(`The array ${charArray} was altered at position ${index} and with the element ${element}
-//     The output is: ${insertIntoCharArray(charArray, index, element)}`);
-// }

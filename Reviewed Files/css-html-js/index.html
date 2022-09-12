@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My First HTML Page</title>
+    </head>
+    <body>
+        <h1>This is my heading</h1>
+        <h2 class="red-text">H2</h2>
+        <h3>H3</h3>
+        <h4>H4</h4>
+        <h5 class="red-text">H5</h5>
+        <h6>H6</h6>
+
+        <p>This is a paragraph <br/>this should be on a second line</p>
+        <p>This is another paragraph</p>
+        <span>This is a span of text <strong class="red-text">and this is bold</strong></span>
+
+        <table id="basic-table">
+            <thead>
+                <tr>
+                    <th>Heading 1</th>
+                    <th>Heading 2</th>
+                    <th>Heading 3</th>
+                    <th>Heading 4</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>1.1</td>
+                    <td>1.2</td>
+                    <td>1.3</td>
+                    <td>1.4</td>
+                </tr>
+                <tr>
+                    <td colspan="4" align="center">
+                        <strong>TOTALS</strong>
+                    </td>
+                </tr>
+                <tr>
+                    <td>5551</td>
+                    <td>1552</td>
+                    <td>153</td>
+                    <td>154</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <img 
+        alt="This is a retard cat image"
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxaO16b2lvjEBOB0EU3GJJsBi2fyc2GM8YFg&usqp=CAU" />
+
+        <div style="color: rgb(0, 255, 0); background-color:gray;">This is just a "box"</div>
+
+        <!-- Advanced Style -->
+        <div class="floating-box" id="fancy-box">
+            Text in the middle
+        </div>
+
+        <style>
+            /* This is where css go */
+            /* There are 3 ways to pick something to style */
+            /* 1.by the tag */
+            /* 2. by the id of the element */
+            /* 3. by the name of an applied class */
+
+            /* Option 1 Tag*/
+            h1 {
+                color: darkred;
+                /* Default are serif */
+                font-family: monospace;
+            }
+
+            p {
+                color: #ffffff;
+                background-color: lightgray;
+            }
+
+            /* table {
+                border: 3px solid black;
+            }
+
+            
+            th {
+                border: 3px solid black;
+            }
+
+            td {
+                border: 3px solid black;
+            } */
+
+            td,
+            th,
+            table {
+                border: 3px solid black;
+                border-collapse: collapse;
+            } 
+
+            /* Option 2  ID*/
+            /* css start with #  */
+            /* HTML starts without */
+            #basic-table {
+                color: blue;
+                
+            }
+
+            /* Option 3 Class/Name */
+            /* css start with .  */
+            /* HTML starts without */
+            .red-text {
+                color: red;
+            }
+            
+            /* advanced */
+            .floating-box {
+                width: 300px;
+                height: 300px;
+                background-color: #f1f1f1;
+                color: black;
+                font-family: sans-serif;
+                margin: 24px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 16px;
+                box-shadow: 0 1px 3px 1px rgba(0,0,0,0.2);
+                cursor: pointer;
+                transition: all 1s ease-in-out;
+
+            }
+
+            .floating-box:hover {
+                background-color: #f1b5fb;
+                transform: scale(1.1);
+                box-shadow: 0 1px 8px 1px rgba(95, 32, 106, 0.8);
+            }
+
+
+        </style>
+
+        <script>
+            console.log("Hi")
+            console.log(2+2)
+            for (let i = 0; i<10; i++){
+                console.log(i+1)
+            }
+            // Access and element by name and change something
+            const fancyBox = document.getElementById('fancy-box');
+            console.log(fancyBox);
+            fancyBox.textContent = "Tim in the middle";
+
+            let count = 0;
+            const interval = setInterval(()=> {
+                fancyBox.textContent = count; 
+                count++;
+            if(count > 9) {
+                fancyBox.textContent = "Tim in the middle";
+                clearInterval(interval);
+            }
+            }, 1000);
+
+
+        </script>
+
+    </body>
+</html>
