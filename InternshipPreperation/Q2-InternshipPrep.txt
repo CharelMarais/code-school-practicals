@@ -1,0 +1,26 @@
+2.1
+  Big O is used to describe the performance of an algorithm and to determine if its scalable or not.
+  This is broken down into time complexity and space complexity.
+
+  - O(1)
+  - O(log n)
+  - O(n)
+  - O(n.log n)
+  - O(n^2)
+  - O(2^n)
+  - O(n!)
+
+2.2
+  Stack:
+  A stack is a sequence of elements saved in static memory it works under the First-In-Last-Out method
+  Heap:
+  A heap has no limit to due to it saving data using dynamic memory. It saves data on a hierarchical system
+
+2.3
+  Linear search: O(n)
+  2D Array: O(n\*m)
+  Insertion Sort: O(n^2)
+
+2.4
+  Space complexity is refers to the total amount of memory space used by an algorithm or program.
+  Merge sort has the space complexity of O(n) due to the input and output array that stays the same length

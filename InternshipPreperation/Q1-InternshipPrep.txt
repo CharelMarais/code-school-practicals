@@ -1,0 +1,21 @@
+1.1 
+    Linear Data Structures
+    - Array
+    - Stack
+    - Queue
+    Non-Linear Data Structures
+    - Tree
+    - Heap
+    - Graphs
+
+1.2
+    Array:
+    Description: An array is a collection of items stored at contiguous memory locations.
+    Category: Linear
+    Difficulty adding anywhere: 
+    Difficulty adding at the beginning/end:
+    Difficulty sorting:
+    Difficulty searching: Due to the fixed locations accessing/searching is fast.
+    When to use
+    When not to use
+
