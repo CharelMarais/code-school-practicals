@@ -1,0 +1,26 @@
+7.1
+CREATE TABLE Users (
+    IdNumber int(13);
+    FirstName varchar(255),
+    Surname varchar(255),
+    DateOfBirth date,
+    Gender char(1)
+    );
+
+7.2
+INSERT INTO Users (IdNumber, FirstName, Surname, DateOfBirth, Gender)
+VALUES ('92012254102685' , 'Mit', 'Tin', '1992-01-22', 'M');
+
+INSERT INTO Users (IdNumber, FirstName, Surname, DateOfBirth, Gender)
+VALUES ('9802214102685' , 'Deez', 'Venter', '1998-02-21', 'F');
+
+7.3
+UPDATE Users
+SET Surname = 'Nuts'
+WHERE IdNumber = 9802214102685;
+
+7.4
+SELECT *
+FROM Users
+WHERE DateOfBirth < '2022-09-10'
+SORT BY DateOfBirth, Surname, FirstName;
