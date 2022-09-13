@@ -36,23 +36,24 @@
     When not to use: When you need to access/add/remove anything from the list of data
 
     Tree:
-    Description: a tree is a hierarchical data structure with parents and children coming from a root
-    Category: Non-Linear
-    Difficulty adding, removing: adding or removing leaves(Outer layers with no children) are easy removing any node with a child
+    Description:    a Tree is a hierarchical data structure with parents and children coming from a root
+    Category:   Non-Linear
+    Difficulty adding, removing: Adding or removing leaves(Outer layers with no children) are easy removing any node with a child
                                 will remove the child node as well.
     Difficulty sorting: A tree can not be sorted a new tree will need to be built to sort data.
     Difficulty searching: 
     When to use: A tree can be used for file systems on a PC
-    When not to use: 
+    When not to use: If the list is a fixed length and needs to be access frequently
 
     Heap:
-    Description:
+    Description: A heap is a binary hierarchical tree that can only add a child if the same row has been filled. Max-heap and min-heap
     Category: Non-Linear
-    Difficulty adding, removing:
-    Difficulty sorting:
-    Difficulty searching:
-    When to use:
-    When not to use:
+    Difficulty adding, removing: Adding can only be done on the bottom layer from left to right. 
+                                Removing will remove the max/ min number the root.
+    Difficulty sorting: Sorting can be done using an array and formulas to calculate the correct parent, left child and right child
+    Difficulty searching: The heap can be searched in the form of an array
+    When to use: Heaps are used when determining priority (min or max value)
+    When not to use: If the list is composed of anything other than integers 
 
     Graph:
     Description:
