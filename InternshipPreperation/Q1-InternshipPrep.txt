@@ -60,7 +60,7 @@
     Category: Non-Linear
     Difficulty adding, removing: adding or removing to a graph involves adding/removing edges and references to the removed node
     Difficulty sorting: 
-    Difficulty searching: 
+    Difficulty searching: Easy to access with Display Vertex ....
     When to use: Like on a social media site to link friends
     When not to use: When the data needs to have a set order and not multiply linked
 
