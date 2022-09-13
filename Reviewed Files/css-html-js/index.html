@@ -62,6 +62,12 @@
             Text in the middle
         </div>
 
+        <button id="clickMe">Clicked 0 times</button>
+        <button id="reset">Reset click count</button>
+
+        <div id="boxR1C1" class="conway-box">
+        </div>
+
         <style>
             /* This is where css go */
             /* There are 3 ways to pick something to style */
@@ -140,6 +146,13 @@
                 box-shadow: 0 1px 8px 1px rgba(95, 32, 106, 0.8);
             }
 
+            .conway-box {
+                width: 10px;
+                height: 10px;
+                border: 1px solid black;
+                cursor: pointer;
+            }
+
 
         </style>
 
@@ -164,6 +177,50 @@
             }
             }, 1000);
 
+            let numTimesClicked = 0;
+
+            const buttonElement = document.getElementById('clickMe');
+            const resetButtonElement = document.getElementById('reset');
+
+            function clickButton() {
+                numTimesClicked++;
+                console.log('Ouch');
+                buttonElement.textContent = `Clicked ${numTimesClicked} times`;
+            }
+
+            function clickButtonReset() {
+                numTimesClicked = 0;
+                buttonElement.textContent = `Clicked ${numTimesClicked} times`;
+                
+            }
+
+            buttonElement.addEventListener('click', clickButton);
+            resetButtonElement.addEventListener('click', clickButtonReset);
+
+            // represent the grid with a 2d array
+            const grid = [];
+            for(let row = 0; row < 20; row++) {
+                const rowOfBooleans = [];
+                for(let col = 0; col < 20; col++) {
+                    rowOfBooleans.push(false);
+                }
+                grid.push(rowOfBooleans);
+            }
+
+            function clickConwayBox(row, column) {
+                grid[row][column] = !grid[row][column]
+                const boxToChange = document.getElementById(
+                    `boxR${row + 1}C${column + 1}`
+                );
+                boxToChange.style.backgroundColor = grid[row][column] 
+                ? 'blue' 
+                : 'white';
+            }
+
+            const buttonRow1Col1 = document.getElementById('boxR1C1');
+            buttonRow1Col1.addEventListener('click', () => {
+                clickConwayBox(0, 0);
+            })
 
         </script>
 
