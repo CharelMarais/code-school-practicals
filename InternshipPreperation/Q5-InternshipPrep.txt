@@ -1,0 +1,11 @@
+5. 
+    A greedy algorithm is a problem solving method to making the logically optimal choice at each stage.
+
+    You need to give a person R26.50.
+    you have the following bills:
+    100, 50, 20, 10, 5, 2, 1, 0.50
+
+    The greedy algorithm method is to ensure the least amount of steps are taken to resolve the issue:
+    Where the above can be solved with 10+5+5+5+1+0.50
+    Greedy is checking what the largest bill is that can fit into the amounts that is needed and working from there.
+    This would be the greedy method to solve this method: 20+5+1+0.50

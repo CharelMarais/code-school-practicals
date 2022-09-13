@@ -9,7 +9,8 @@
 function countNonMatchingAdjacentCharacters(twoCharString) {
   let count = 0;
   for (let i = 0; i < twoCharString.length; i++) {
-    // if to check the first char only to the next position and not the previous
+    // if to check the first char only to the next position
+    // OR last char only to the previous position
     if (
       (i === 0 && twoCharString[i] !== twoCharString[i + 1]) ||
       (i === twoCharString - 1 && twoCharString[i] !== twoCharString[i - 1])

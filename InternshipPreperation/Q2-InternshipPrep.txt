@@ -18,7 +18,7 @@
 
 2.3
   Linear search: O(n)
-  2D Array: O(n\*m)
+  2D Array: O(n*m)
   Insertion Sort: O(n^2)
 
 2.4

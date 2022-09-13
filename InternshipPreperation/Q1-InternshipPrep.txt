@@ -4,7 +4,7 @@
     - Stack
     - Queue
     Non-Linear Data Structures
-    - Tree
+    - BST
     - Heap
     - Graphs
 
@@ -12,10 +12,54 @@
     Array:
     Description: An array is a collection of items stored at contiguous memory locations.
     Category: Linear
-    Difficulty adding anywhere: 
-    Difficulty adding at the beginning/end:
+    Difficulty adding, removing, and sorting: It will need to be resized and the memory reassigned. O(n)
+    Difficulty searching: Due to the fixed locations accessing/searching is fast. O(n)
+    When to use: Best place to use is for set list.
+    When not to use: When large amounts of data will need to be updated constantly
+
+    Stack:
+    Description: An stack is a collection of items stored at contiguous memory locations but only the last item can be accessed FILO.
+    Category: Linear
+    Difficulty adding, removing: Due to a stack's FILO only the last added entry can be altered or added onto. O(1) or O(n)
+    Difficulty sorting: A stack can only be sorted with a secondary stack O(n^2)
+    Difficulty searching: A stack cant be searched only the last item can be peeked at. o(n)
+    When to use: Best place to use is for set items that can be used for back tracking like the back button on a browser.
+    When not to use: Any place where more that the last item will need to be altered/checked/searched
+
+    Queue:
+    Description: An queue is a list of items stored at contiguous memory locations but work on the FIFO principal.
+    Category: Linear
+    Difficulty adding, removing: A queue can only have items removed from the Front of the list and added from the back of the list O(n)
+    Difficulty sorting: The queue will need a stack to sort(n^2)
+    Difficulty searching: A queue can not be searched only the front element can be peeked at.
+    When to use: When you want keep thins in the order they are inserted.
+    When not to use: When you need to access/add/remove anything from the list of data
+
+    Tree:
+    Description: a tree is a hierarchical data structure with parents and children coming from a root
+    Category: Non-Linear
+    Difficulty adding, removing: adding or removing leaves(Outer layers with no children) are easy removing any node with a child
+                                will remove the child node as well.
+    Difficulty sorting: A tree can not be sorted a new tree will need to be built to sort data.
+    Difficulty searching: 
+    When to use: A tree can be used for file systems on a PC
+    When not to use: 
+
+    Heap:
+    Description:
+    Category: Non-Linear
+    Difficulty adding, removing:
     Difficulty sorting:
-    Difficulty searching: Due to the fixed locations accessing/searching is fast.
-    When to use
-    When not to use
+    Difficulty searching:
+    When to use:
+    When not to use:
+
+    Graph:
+    Description:
+    Category: Non-Linear
+    Difficulty adding, removing:
+    Difficulty sorting:
+    Difficulty searching:
+    When to use:
+    When not to use:
 
